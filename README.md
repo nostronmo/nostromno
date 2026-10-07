@@ -1,2 +1,2 @@
-# nostromno.github.io
+# nostromno
 My Portfiolio Website

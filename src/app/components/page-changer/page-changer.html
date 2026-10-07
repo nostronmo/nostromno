@@ -1,0 +1,35 @@
+@if (!isLoading()) {
+<div class="w-full flex items-center justify-center space-x-4 border-t border-gray-100 pt-4 pb-2">
+  <button
+    (click)="onNavigate(currentPage() - 1)"
+    [disabled]="currentPage() === 0"
+    class="flex items-center px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed transition-all active:scale-95"
+  >
+    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M15 19l-7-7 7-7"
+      ></path>
+    </svg>
+    Previous
+  </button>
+
+  <span class="text-sm text-gray-600 font-medium">
+    Page <span class="font-bold text-gray-900">{{ currentPage() + 1 }}</span> {{ of
+    <span class="font-bold text-gray-900">{{ totalPages() }}</span>
+  </span>
+
+  <button
+    (click)="onNavigate(currentPage() + 1)"
+    [disabled]="currentPage() >= totalPages() - 1"
+    class="flex items-center px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed transition-all active:scale-95"
+  >
+    Next
+    <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+    </svg>
+  </button>
+</div>
+}
