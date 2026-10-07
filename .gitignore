@@ -165,7 +165,6 @@ nbproject/private/
 **/*terraform.tfstate**
 **/*validate.md
 **/data
-**/*.json
 **/*.gz
 **/*app.log
 **/*keys
