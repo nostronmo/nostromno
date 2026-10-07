@@ -4,9 +4,10 @@ export const routes: Routes = [
   {
     path: '',
     pathMatch: 'full',
+    redirectTo: 'me',
   },
   {
-    path: '',
+    path: 'me',
     loadComponent: () => import('./pages/home/home').then((m) => m.Home),
     data: { hideLayout: false },
   },
