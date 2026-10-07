@@ -27,7 +27,7 @@ jobs:
         run: npm install --no-package-lock
 
       - name: Build Angular App
-        run: npx ng build --base-href "/nostronmo/"
+        run: npx ng build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
