@@ -1,0 +1,1 @@
+import{a as ZE}from"./main-X43PO7EO.js";var o=class e{ngOnInit(){}static ɵfac=function(n){return new(n||e)};static ɵcmp=ZE({type:e,selectors:[[`app-home`]],decls:0,vars:0,template:function(n,m){},encapsulation:2})};export{o as Home};
