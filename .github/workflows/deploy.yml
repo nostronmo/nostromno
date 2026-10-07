@@ -17,9 +17,11 @@ jobs:
           node-version: 20
 
       - name: Install Dependencies
+        working-directory: /src
         run: npm install --no-package-lock
 
       - name: Build Angular App
+        working-directory: /src
         run: npx ng build --configuration production --base-href "/nostronmo/"
 
       - name: Deploy to GitHub Pages
