@@ -1,8 +1,5 @@
 # Nostromno || My Portfiolio Website
 
-# nostromno
-My Portfiolio Website
-
 ## Used tech
 
 Angular
