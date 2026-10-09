@@ -1,38 +1,36 @@
-<div class="flex items-center gap-4 font-medium">
-  <a href="#writing" class="font-coloring2 transition-colors">{{ locale.ui().projects }}</a>
+<div class="flex flex-wrap items-center justify-center sm:justify-end gap-x-3 gap-y-2 sm:gap-4 font-medium">
+  <a href="#writing" class="font-coloring2 transition-colors text-xs sm:text-sm">{{ locale.ui().projects }}</a>
 
-  <span class="text-white/20">|</span>
+  <span class="hidden sm:inline text-white/20">|</span>
 
-  <a href="#open-source" class="font-coloring2 transition-colors">{{ locale.ui().opensource }}</a>
+  <a href="#open-source" class="font-coloring2 transition-colors text-xs sm:text-sm">{{ locale.ui().opensource }}</a>
 
-  <span class="text-white/20">|</span>
+  <span class="hidden sm:inline text-white/20">|</span>
 
-  <a href="#documents" class="font-coloring2 transition-colors">{{ locale.ui().documents }}</a>
+  <a href="#documents" class="font-coloring2 transition-colors text-xs sm:text-sm">{{ locale.ui().documents }}</a>
 
-  <span class="text-white/20">|</span>
+  <span class="hidden sm:inline text-white/20">|</span>
 
   <button
     (click)="locale.cycleLanguage()"
-    class="font-bold px-2 py-1 hover:bg-white/10 rounded transition-colors cursor-pointer"
+    class="font-bold px-2 py-1 hover:bg-white/10 rounded transition-colors cursor-pointer text-xs sm:text-sm flex items-center"
   >
-    <span class="text-xs text-gray-400 font-normal mr-1"> {{ locale.ui().changeto }} </span>
+    <span class="text-[10px] sm:text-xs text-gray-400 font-normal mr-1"> {{ locale.ui().changeto }} </span>
     {{ locale.getDisplayLabel() }}
   </button>
 
-  <span class="text-white/20">|</span>
+  <span class="hidden sm:inline text-white/20">|</span>
 
   <button class="font-coloring2 transition-colors cursor-pointer">
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
       stroke-width="2"
       stroke-linecap="round"
       stroke-linejoin="round"
-      class="lucide lucide-sun"
+      class="lucide lucide-sun w-5 h-5 sm:w-6 sm:h-6"
       aria-hidden="true"
     >
       <circle cx="12" cy="12" r="4"></circle>

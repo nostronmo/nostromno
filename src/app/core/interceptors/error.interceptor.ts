@@ -17,7 +17,6 @@ export class ErrorInterceptor implements HttpInterceptor {
   intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
     return next.handle(request).pipe(
       catchError((error: HttpErrorResponse) => {
-        const isAuthRoute = request.url.includes('/auth/');
         if (
           error.status === 0 ||
           error.status === 502 ||

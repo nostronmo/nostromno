@@ -12,8 +12,8 @@ export const routes: Routes = [
     data: { hideLayout: false },
   },
   {
-    path: 'projects',
-    loadComponent: () => import('./pages/projects/projects').then((m) => m.Projects),
+    path: 'blog/:slug',
+    loadComponent: () => import('./pages/blog/blog').then((m) => m.Blog),
     data: { hideLayout: false },
   },
   {
