@@ -27,19 +27,23 @@ export const LocaleStore = signalStore(
       } else {
         nextLang = 'pt_br';
       }
+      localStorage.setItem('lang', nextLang);
+      patchState(store, { lang: nextLang });
     },
     getDisplayLabel(): string {
       const current = store.lang();
       if (current === 'pt_br') {
-        return 'PORTUGUÊS';
+        return 'ENGLISH';
       }
+      if (current === 'en') {
+        return 'РУССКИЙ';
+      }
+      /*
       if (current === 'ru') {
         return 'РУССКИЙ';
       }
-      if (current === 'en') {
-        return 'ENGLISH';
-      }
-      return '';
+      */
+      return 'PORTUGUÊS';
     },
   })),
 );

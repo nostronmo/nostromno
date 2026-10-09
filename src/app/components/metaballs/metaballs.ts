@@ -9,6 +9,7 @@ import {
 } from '@angular/core';
 import { ShaderLogic } from '../../core/logic/shader';
 import { MeshData } from '../../core/logic/mesh';
+import { PlatformLocation } from '@angular/common';
 
 @Component({
   selector: 'app-metaballs',
@@ -20,6 +21,7 @@ export class Metaballs implements AfterViewInit, OnDestroy {
   @ViewChild('glCanvas') canvasRef!: ElementRef<HTMLCanvasElement>;
 
   private shaderFunctionality = inject(ShaderLogic);
+  private platformLocation = inject(PlatformLocation);
 
   private backgroundColor: [number, number, number, number] = [0.12, 0.12, 0.12, 4.0];
   // Dark theme and white theme is all zeroes.
@@ -51,11 +53,14 @@ export class Metaballs implements AfterViewInit, OnDestroy {
       throw new Error('WebGL 2 not supported');
     }
 
+    const baseHref = this.platformLocation.getBaseHrefFromDOM() || '/';
+    const cleanBase = baseHref.endsWith('/') ? baseHref.slice(0, -1) : baseHref;
+
     const vsSource = await this.shaderFunctionality.loadShaderFile(
-      '/assets/shaders/metaballs.vert',
+      `${cleanBase}/assets/shaders/metaballs.vert`,
     );
     const fsSource = await this.shaderFunctionality.loadShaderFile(
-      '/assets/shaders/metaballs.frag',
+      `${cleanBase}/assets/shaders/metaballs.frag`,
     );
 
     const initResult = this.shaderFunctionality.initWebGL(

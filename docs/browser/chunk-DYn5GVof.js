@@ -1,1 +1,0 @@
-import{a as ZE}from"./main-EN4T3KEI.js";var s=class e{static ɵfac=function(t){return new(t||e)};static ɵcmp=ZE({type:e,selectors:[[`app-projects`]],decls:0,vars:0,template:function(t,a){},encapsulation:2})};export{s as Projects};

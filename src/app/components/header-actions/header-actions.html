@@ -1,27 +1,27 @@
-<div class="flex items-center gap-4 text-sm font-medium">
-  <a href="#" class="hover:text-red-300 transition-colors">Projects</a>
+<div class="flex items-center gap-4 font-medium">
+  <a href="#writing" class="font-coloring2 transition-colors">{{ locale.ui().projects }}</a>
 
   <span class="text-white/20">|</span>
 
-  <a href="#" class="hover:text-red-300 transition-colors">Open source</a>
+  <a href="#open-source" class="font-coloring2 transition-colors">{{ locale.ui().opensource }}</a>
 
   <span class="text-white/20">|</span>
 
-  <a href="#" class="hover:text-red-300 transition-colors">Documents</a>
+  <a href="#documents" class="font-coloring2 transition-colors">{{ locale.ui().documents }}</a>
 
   <span class="text-white/20">|</span>
 
   <button
     (click)="locale.cycleLanguage()"
-    class="text-sm font-bold px-2 py-1 hover:bg-white/10 rounded transition-colors cursor-pointer"
+    class="font-bold px-2 py-1 hover:bg-white/10 rounded transition-colors cursor-pointer"
   >
-    <span class="text-xs text-gray-400 font-normal mr-1"> Change To </span>
+    <span class="text-xs text-gray-400 font-normal mr-1"> {{ locale.ui().changeto }} </span>
     {{ locale.getDisplayLabel() }}
   </button>
 
   <span class="text-white/20">|</span>
 
-  <button class="hover:text-red-300 transition-colors cursor-pointer">
+  <button class="font-coloring2 transition-colors cursor-pointer">
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="24"

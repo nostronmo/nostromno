@@ -1,17 +1,15 @@
 <div class="min-h-screen flex flex-col">
-  <app-metaballs class="w-full overflow-hidden" />
+  <app-metaballs class="w-full overflow-hidden pointer-events-none" />
   @if (showLayout()) {
-  <app-header />
+  <app-header class="sticky top-0 z-50" />
   }
 
   <main
     [class.min-h-screen]="!showLayout()"
     [class.min-h-calc]="showLayout()"
-    class="flex flex-col grow"
+    class="flex flex-col grow z-10"
   >
-    <div class="flex grow overflow-auto">
-      <router-outlet />
-    </div>
+    <router-outlet />
   </main>
 
   @if (showLayout()) {

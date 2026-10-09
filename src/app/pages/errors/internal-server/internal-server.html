@@ -4,20 +4,20 @@
 
     <div class="relative -mt-16">
       <h2 class="text-2xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-        Oops! Internal Server Error.
+        {{locale.error().internal_server}}
       </h2>
 
       <p class="mt-4 text-gray-500">
-        Our servers are having a bit of a moment. We're looking into why this happened.
+        {{locale.error().internal_server_2}}
         <br class="hidden sm:block" />
-        Please try again later or head back to safety.
+        {{locale.error().internal_server_3}}
       </p>
 
       <a
-        [routerLink]="['/home']"
+        [routerLink]="['/me']"
         class="mt-6 inline-block rounded bg-indigo-600 px-5 py-3 text-sm font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring focus:ring-indigo-300 transition-colors"
       >
-        Back to Home
+        {{locale.error().return_home}}
       </a>
     </div>
   </div>

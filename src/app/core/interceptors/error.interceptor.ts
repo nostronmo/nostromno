@@ -27,6 +27,11 @@ export class ErrorInterceptor implements HttpInterceptor {
           this.router.navigate(['/error/500']);
         }
 
+        if (error.status === 404) {
+          this.router.navigate(['/error/404']);
+        }
+
+        /*
         if (error.status === 429) {
           this.router.navigate(['/error/429']);
         }
@@ -35,6 +40,7 @@ export class ErrorInterceptor implements HttpInterceptor {
           this.router.navigate(['/error/401']);
         }
 
+         */
         return throwError(() => error);
       }),
     );

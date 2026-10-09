@@ -20,8 +20,8 @@
         "build": {
           "builder": "@angular/build:application",
           "options": {
-            "outputPath":"docs",
-            "index":"src/index.html",
+            "outputPath": "dist/nostromno",
+            "index": "src/index.html",
             "browser": "src/main.ts",
             "tsConfig": "tsconfig.app.json",
             "assets": [

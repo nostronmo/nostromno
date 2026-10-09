@@ -1,5 +1,9 @@
 @import 'tailwindcss';
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'DynaPuff', cursive;
 }
@@ -42,4 +46,32 @@ body {
 
 .font-quantico {
   font-family: 'Quantico', sans-serif;
+}
+
+.font-coloring {
+  color: color-mix(
+    in oklab,
+    var(--color-red-100) /* oklch(93.6% 0.032 17.717) = #ffe2e2 */ 70%,
+    transparent
+  );
+}
+
+.font-coloring2 {
+  color: var(--color-red-100) /* oklch(88.5% 0.062 18.334) */;
+}
+
+.font-coloring2:hover {
+  color: var(--color-red-300) /* oklch(80.8% 0.114 19.571) */;
+}
+
+.title-coloring {
+  color: var(--color-red-100) /* oklch(93.6% 0.032 17.717) = #ffe2e2 */;
+}
+
+.border-custom {
+  border-color: color-mix(
+    in oklab,
+    var(--color-red-100) /* oklch(93.6% 0.032 17.717) = #ffe2e2 */ 60%,
+    transparent
+  );
 }

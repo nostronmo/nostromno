@@ -16,3 +16,16 @@ run = "bun run start"
 [tasks.web]
 description = "Run Web App to Another Device"
 run = "bun run inter"
+
+[tasks.deploy_test]
+description = "Test production build locally for GitHub Pages"
+alias = "dt"
+dir = "{{cwd}}"
+run = """
+PROJECT_NAME="${PWD##*/}"
+bun x ng build --base-href "/${PROJECT_NAME}/"
+rm -rf dist/${PROJECT_NAME}
+mkdir -p dist/${PROJECT_NAME}
+cp -r dist/browser/* dist/${PROJECT_NAME}/
+npx http-server dist --open="/${PROJECT_NAME}/"
+"""
