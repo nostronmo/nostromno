@@ -29,7 +29,7 @@ jobs:
         run: bun install
 
       - name: Build Angular App
-        run: bun x ng build --base-href "/nostronmo/"
+        run: bun x ng build --base-href "/nostromno/"
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
